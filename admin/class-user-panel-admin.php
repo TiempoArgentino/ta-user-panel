@@ -52,6 +52,7 @@ class User_Panel_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+		$this->admin_pages();
 	}
 
 	/**
@@ -99,5 +100,11 @@ class User_Panel_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/user-panel-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
-
+	/**
+	 * admin pages
+	 */
+	public function admin_pages()
+	{
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-user-panel-settings.php';
+	}
 }
