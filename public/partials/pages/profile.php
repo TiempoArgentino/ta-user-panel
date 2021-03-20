@@ -1,5 +1,5 @@
 <?php do_action('before_profile_page')?>
-<div class="content content-active" id="profile">
+<div class="content-panel content-active" id="profile">
     <div class="row d-flex align-items-center">
         <div class="col-md-4 col-12 profile-image">
             <img src="<?php echo user_panel_proccess()->profile_image()?>" class="img-fluid">

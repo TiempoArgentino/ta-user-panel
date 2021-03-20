@@ -7,11 +7,11 @@ span.tab-select {
     cursor: pointer;
     font-weight: bold;
 }
-.content {
+.content-panel {
     padding: 1% 1%;
     display: none;
 }
-.content.content-active{
+.content-panel.content-active{
     display: block;
 }
 span.tab-select.tab-active {

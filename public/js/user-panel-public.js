@@ -2,7 +2,7 @@
 	$(document).ready(function(){
 		$('.tab-select').on('click',function(){
 			var content = $(this).data('content');
-			$('.content').not($(content)).removeClass('content-active').slideUp(400,function(){
+			$('.content-panel').not($(content)).removeClass('content-active').slideUp(400,function(){
 				$(content).addClass('content-active').slideDown();
 			});
 			$('.tab-select').not($(this)).removeClass('tab-active');
