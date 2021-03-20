@@ -1,32 +1,29 @@
 (function( $ ) {
-	'use strict';
+	$(document).ready(function(){
+		$('.tab-select').on('click',function(){
+			var content = $(this).data('content');
+			$('.content').not($(content)).removeClass('content-active').slideUp(400,function(){
+				$(content).addClass('content-active').slideDown();
+			});
+			$('.tab-select').not($(this)).removeClass('tab-active');
+			$(this).addClass('tab-active');
+		});	
+	});
 
 	/**
-	 * All of the code for your public-facing JavaScript source
-	 * should reside in this file.
-	 *
-	 * Note: It has been assumed you will write jQuery code here, so the
-	 * $ function reference has been prepared for usage within the scope
-	 * of this function.
-	 *
-	 * This enables you to define handlers, for when the DOM is ready:
-	 *
-	 * $(function() {
-	 *
-	 * });
-	 *
-	 * When the window is loaded:
-	 *
-	 * $( window ).load(function() {
-	 *
-	 * });
-	 *
-	 * ...and/or other possibilities.
-	 *
-	 * Ideally, it is not considered best practise to attach more than a
-	 * single DOM-ready or window-load handler for a particular page.
-	 * Although scripts in the WordPress core, Plugins and Themes may be
-	 * practising this, we should strive to set a better example in our own work.
+	 * Profile image
 	 */
+	$(document).ready(function(){
+		$('#profile_image').on('change',function(){
+			$('#image-profile').submit();
+		});
+	});
 
+	$(document).ready(function(){
+		$('.open-form-edit').on('click',function(){
+			$(this).hide(400,function(){
+				$('#image-profile').css('display','flex');
+			});
+		});
+	})
 })( jQuery );

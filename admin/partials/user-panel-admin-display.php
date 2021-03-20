@@ -17,17 +17,19 @@
 <div class="wrap">
     <h1><?php echo __('Panel settings', 'user-panel'); ?></h1>
     <form method="post">
-        <?php
-        echo '<table class="form-table">
-        <tbody>
-            <tr>
-                <th scope="row">' . __('Default page', 'panel-user') . '</th>
-                <td>' . user_panel_settings()->panel_input() . '</td>
-            </tr>
-        </tbody>
-    </table>
-    <p class="submit"><input type="submit" name="submit" class="button button-primary" value="'.__('Save','user-panel').'" /></p>
-    </div>';
-        ?>
+        <table class="form-table">
+            <tbody>
+                <tr>
+                    <th scope="row"><?php echo __('Profile page', 'panel-user')?></th>
+                    <td><?php user_panel_settings()->page_profile_input()?></td>
+                </tr>
+                <tr>
+                    <th scope="row"><?php echo __('Login page', 'panel-user')?></th>
+                    <td><?php user_panel_settings()->page_login_input()?></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="submit"><input type="submit" name="submit" class="button button-primary" value="<?php echo __('Save','user-panel')?>" /></p>
+       
     </form>
 </div>

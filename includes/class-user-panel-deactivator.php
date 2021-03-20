@@ -30,7 +30,14 @@ class User_Panel_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		self::delete_pages();
 	}
 
+	public static function delete_pages()
+	{
+		if(get_option('user_panel_page')) {
+			wp_delete_post(get_option('user_panel_page'));
+			delete_option('user_panel_page');
+		}
+	}
 }

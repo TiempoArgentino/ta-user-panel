@@ -5,11 +5,11 @@ class User_Panel_Templates
     public function __construct()
     {
         add_filter('template_include', [$this, 'panel_template'], 99);
-    }
+     }
      /**
      * You must create a folder called "user-panel" into your main theme and copy the php file to override then
      */
-    public function suscription_load_template($filename = '')
+    public function profile_load_template($filename = '')
     {
         if (!empty($filename)) {
             if (locate_template('user-panel/' . $filename)) {
@@ -33,9 +33,10 @@ class User_Panel_Templates
     public function panel_template($template)
     {
         if (is_page(get_option('user_panel_page')))
-            $template = $this->suscription_load_template('pages/user-panel-page.php');
+            $template = $this->profile_load_template('pages/user-panel-page.php');
         return $template;
     }
+
 }
 
 

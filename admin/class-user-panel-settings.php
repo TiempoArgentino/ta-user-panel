@@ -35,9 +35,9 @@ class User_Panel_Settings
         return $pages;
     }
     /**
-     * pages select
+     * profile page select
      */
-    public function panel_input()
+    public function page_profile_input()
     {
         $page_slug = get_option('user_panel_page');
         $pages = $this->get_pages();
@@ -48,7 +48,23 @@ class User_Panel_Settings
             $select .= '<option value="' . $p->ID . '" ' . selected($page_slug, $p->ID, false) . '>' . $p->post_title . '</option>';
         }
         $select .= '</select>';
-        return $select;
+        echo $select;
+    }
+    /**
+     * Login page
+     */
+    public function page_login_input()
+    {
+        $page_slug = get_option('user_login_page');
+        $pages = $this->get_pages();
+
+        $select = '<select name="user_login_page">';
+        $select .= '<option value=""> -- select a page -- </option>';
+        foreach ($pages as $p) {
+            $select .= '<option value="' . $p->ID . '" ' . selected($page_slug, $p->ID, false) . '>' . $p->post_title . '</option>';
+        }
+        $select .= '</select>';
+        echo $select;
     }
     /**
      * view
@@ -64,6 +80,10 @@ class User_Panel_Settings
     {
         if (isset($_POST['user_panel_page'])) {
             update_option('user_panel_page', sanitize_text_field($_POST['user_panel_page']), true);
+        }
+
+        if(isset($_POST['user_login_page'])) {
+            update_option('user_login_page', sanitize_text_field($_POST['user_login_page']), true);
         }
     }
 }

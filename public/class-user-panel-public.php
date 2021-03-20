@@ -105,6 +105,7 @@ class User_Panel_Public {
 	public function load_classes()
 	{
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-user-panel-templates.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-user-panel-proccess.php';
 	}
 
 }

@@ -1,4 +1,65 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+span.tab-select {
+    display: inline-block;
+    background: lightgrey;
+    padding: 0 2%;
+    min-width: 130px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.content {
+    padding: 1% 1%;
+    display: none;
+}
+.content.content-active{
+    display: block;
+}
+span.tab-select.tab-active {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+.profile-image{
+    position: relative;
+}
+#image-profile {
+    position: absolute;
+    z-index: 150;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    background: rgb(0 0 0 / 57%);
+    padding: 8%
+}
+span.open-form-edit {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    max-width: 64px;
+    max-height: 64px;
+    overflow: hidden;
+    padding: 3%;
+    border: 1px solid yellow;
+    background-color: yellow;
+    border-radius: 100%;
+    cursor: pointer;
+}
+span.open-form-edit img{
+    max-width: 100%;
+}
+.form-content {
+    color: white;
+    text-align: center;
+}
+.error-upload-profile {
+    text-align: center;
+    background: red;
+    color: white;
+    padding: 1%;
+    margin: 1% 0 0;
+    border-radius: 21px;
+    font-weight: bold;
+    display: inline-block;
+}

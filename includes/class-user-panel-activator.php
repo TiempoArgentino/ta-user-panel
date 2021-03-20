@@ -73,7 +73,7 @@ class User_Panel_Activator
 	public static function create_panel_user_page()
 	{
 		$args = [
-			'post_title' => __('Profile', 'subscriptions'),
+			'post_title' => __('User Panel', 'subscriptions'),
 			'post_status'   => 'publish',
 			'post_type'     => 'page',
 			'post_content'  => 'This page is for the subscription template, please modify the content in your-theme/user-panel/pages/user-panel-page.php',
