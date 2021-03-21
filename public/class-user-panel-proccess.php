@@ -7,9 +7,15 @@ class User_Panel_Proccess
         add_action('before_panel_user', [$this, 'verify_user_login']);
 
         add_action('panel_user_tabs', [$this, 'user_profile_tab'], 3);
-        add_action('panel_user_content', [$this, 'user_profile_content']);
+        add_action('panel_user_content', [$this, 'user_profile_content']); 
+        
+        add_action('panel_user_tabs', [$this, 'user_account_tab'], 4);
+        add_action('panel_user_content', [$this, 'user_account_content']); 
 
         add_action('before_profile_page', [$this,'profile_image_upload']);
+
+       
+        
     }
     /**
      * verify user
@@ -33,7 +39,7 @@ class User_Panel_Proccess
      */
     public function user_profile_content()
     {
-        if (locate_template('user-panel/pages/page.php')) {
+        if (locate_template('user-panel/pages/profile.php')) {
             /**
              * Create a folder in your theme called "user-panel", into that create other folder called page with file called page.php
              */
@@ -117,6 +123,50 @@ class User_Panel_Proccess
     {
         return '<div class="error-upload-profile">'.$error.'</div>';
     }
+
+    /**
+     * User data tab
+     */
+    public function user_account_tab()
+    {
+        echo '<span class="tab-select" data-content="#account">' . __('Account', 'panel-user') . '</span> ';
+    }
+    /**
+     * content profile
+     */
+    public function user_account_content()
+    {
+        if (locate_template('user-panel/pages/page.php')) {
+            /**
+             * Create a folder in your theme called "user-panel", into that create other folder called page with file called page.php
+             */
+            require_once get_template_directory() . '/user-panel/pages/account.php';
+        } else {
+            /**
+             * Default profile template
+             */
+            require_once plugin_dir_path(dirname(__FILE__)) . 'public/partials/pages/account.php';
+        }
+    }
+
+    public function get_user_country($user_id)
+    {
+        $country = get_user_meta($user_id,'_user_country',true);
+        return isset($country) || $country !== null || $country !== '' ? $country : '';
+    }
+
+    public function get_user_state($user_id)
+    {
+        $state = get_user_meta($user_id,'_user_state',true);
+        return isset($state) || $state !== null || $state !== '' ? $state : '';
+    }
+
+    public function get_user_phone($user_id)
+    {
+        $phone = get_user_meta($user_id,'_user_phone',true);
+        return isset($phone) || $phone !== null || $phone !== '' ? $phone : '';
+    }
+   
 }
 
 function user_panel_proccess()

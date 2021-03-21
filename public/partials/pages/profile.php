@@ -19,6 +19,6 @@
         </div>
     </div>
     <div class="row">
-        <?php do_action('profile_extra')?>
+        <?php do_action('profile_extra_content')?>
     </div>
 </div>

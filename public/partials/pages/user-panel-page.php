@@ -8,10 +8,11 @@
         <div class="col-12 tabs" id="tabs">
             <?php do_action('panel_user_tabs') ?>
         </div>
-        <div class="col-12" id="content">
+        <div class="col-12" id="content-coso">
             <?php do_action('panel_user_content') ?>
         </div>
     </div>
 </div>
+
 <?php do_action('after_panel_user')?>
 <?php get_footer() ?>
