@@ -135,7 +135,7 @@ class User_Panel_Proccess
      */
     public function user_account_content()
     {
-        if (locate_template('user-panel/pages/page.php')) {
+        if (locate_template('user-panel/pages/account.php')) {
             /**
              * Create a folder in your theme called "user-panel", into that create other folder called page with file called page.php
              */

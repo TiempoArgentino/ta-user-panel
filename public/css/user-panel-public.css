@@ -16,7 +16,7 @@
 }
 .tab-select.tab-active {
     background: black;
-    color: white;
+    color: white !important;
     font-weight: bold;
 }
 .profile-image{
