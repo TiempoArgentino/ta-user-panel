@@ -1,7 +1,8 @@
 (function( $ ) {
 	$(document).ready(function(){
-		$('.tab-select').on('click',function(){
+		$('.tab-select').on('click',function(e){
 			var content = $(this).data('content');
+			
 			$('.content-panel').not($(content)).removeClass('content-active').slideUp(400,function(){
 				$(content).addClass('content-active').slideDown();
 			});
@@ -9,7 +10,13 @@
 			$(this).addClass('tab-active');
 		});	
 	});
-
+	$(document).ready(function(){
+		var url = window.location;
+		if(url.hash){
+			$('.content-panel').not($(url.hash)).removeClass('content-active');
+			$(url.hash).addClass('content-active');
+		}
+	});
 	/**
 	 * Profile image
 	 */

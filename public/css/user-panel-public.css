@@ -1,4 +1,4 @@
-span.tab-select {
+.tab-select {
     display: inline-block;
     background: lightgrey;
     padding: 0 2%;
@@ -14,7 +14,7 @@ span.tab-select {
 .content-panel.content-active{
     display: block;
 }
-span.tab-select.tab-active {
+.tab-select.tab-active {
     background: black;
     color: white;
     font-weight: bold;

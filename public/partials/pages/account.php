@@ -17,17 +17,17 @@
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Country', 'user-panel') ?></label>
-                <input type="text" class="form-control" name="country_name" id="country_name" value="<?php echo user_panel_proccess()->get_user_country(wp_get_current_user()->ID) ?>" required />
+                <input type="text" class="form-control" name="country_name" id="country_name" value="<?php echo user_panel_proccess()->get_user_country(wp_get_current_user()->ID) ?>"  />
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('State', 'user-panel') ?></label>
-                <input type="text" class="form-control" name="state_name" id="state_name" value="<?php echo user_panel_proccess()->get_user_state(wp_get_current_user()->ID) ?>" required />
+                <input type="text" class="form-control" name="state_name" id="state_name" value="<?php echo user_panel_proccess()->get_user_state(wp_get_current_user()->ID) ?>" />
             </div>
         </div>
         <div class="col-md-6 col-12">
             <div class="form-group">
                 <label for=""><?php echo __('Phone', 'user-panel') ?></label>
-                <input type="text" class="form-control" name="user_phone" id="user_phone" value="<?php echo user_panel_proccess()->get_user_phone(wp_get_current_user()->ID) ?>" required />
+                <input type="text" class="form-control" name="user_phone" id="user_phone" value="<?php echo user_panel_proccess()->get_user_phone(wp_get_current_user()->ID) ?>"  />
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Email', 'user-panel') ?></label>
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Password', 'user-panel') ?></label>
-                <input type="email" class="form-control" name="user_password" id="user_password" value="" />
+                <input type="text" class="form-control" name="user_password" id="user_password" value="" />
                 <p class="small"><?php echo __('Leave blank to not change', 'user-panel') ?></p>
             </div>
             <input type="hidden" name="user_id" value="<?php echo wp_get_current_user()->ID ?>">
