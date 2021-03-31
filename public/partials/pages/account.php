@@ -9,11 +9,11 @@
         <div class="col-md-6 col-12">
             <div class="form-group">
                 <label for=""><?php echo __('Name', 'user-panel') ?></label>
-                <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo wp_get_current_user()->first_name ?>" required />
+                <input type="text" class="form-control" name="first_name_account" id="first_name_account" value="<?php echo wp_get_current_user()->first_name ?>" required />
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Last Name', 'user-panel') ?></label>
-                <input type="text" class="form-control" name="last_name" id="last_name" value="<?php echo wp_get_current_user()->last_name ?>" required />
+                <input type="text" class="form-control" name="last_name_account" id="last_name_account" value="<?php echo wp_get_current_user()->last_name ?>" required />
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Country', 'user-panel') ?></label>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for=""><?php echo __('Email', 'user-panel') ?></label>
-                <input type="email" disabled class="form-control" name="user_email" id="user_email" value="<?php echo wp_get_current_user()->user_email ?>" />
+                <input type="email" disabled class="form-control" name="user_email_account" id="user_email_account" value="<?php echo wp_get_current_user()->user_email ?>" />
                 <p class="small"><?php echo __('The email can\'t be change', 'user-panel') ?></p>
             </div>
             <div class="form-group">

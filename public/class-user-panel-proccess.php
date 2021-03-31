@@ -24,14 +24,19 @@ class User_Panel_Proccess
         if (!is_user_logged_in()) {
             wp_redirect(get_permalink(get_option('user_login_page')) . '?login=unauthorized');
             exit();
-        }
+        } 
     }
     /**
      * tab profile
      */
-    public function user_profile_tab()
+    public function user_profile_tab($tab = '')
     {
-        echo '<a href="#profile" class="tab-select tab-active" data-content="#profile">' . __('Profile', 'panel-user') . '</a> ';
+        if(has_filter( 'panel_tabs_profile' )) {
+            apply_filters( 'panel_tabs_profile', $tab );
+        } else {
+            echo '<a href="#profile" class="tab-select tab-active" data-content="#profile">' . __('Profile', 'panel-user') . '</a> ';
+        }
+        
     }
     /**
      * content profile
@@ -126,9 +131,13 @@ class User_Panel_Proccess
     /**
      * User data tab
      */
-    public function user_account_tab()
+    public function user_account_tab($tab = '')
     {
-        echo '<a href="#account" class="tab-select" data-content="#account">' . __('Account', 'panel-user') . '</a> ';
+        if(has_filter( 'panel_tabs_account' )) {
+            apply_filters( 'panel_tabs_account', $tab );
+        } else {
+            echo '<a href="#account" class="tab-select" data-content="#account">' . __('Account', 'panel-user') . '</a> ';
+        }
     }
     /**
      * content profile
@@ -175,12 +184,12 @@ class User_Panel_Proccess
             $user_data = [];
             $user_data['ID'] = $user_id;
 
-            if (isset($_POST['first_name'])) {
-                $user_data['first_name'] = sanitize_text_field($_POST['first_name']);
+            if (isset($_POST['first_name_account'])) {
+                $user_data['first_name'] = sanitize_text_field($_POST['first_name_account']);
             }
 
-            if (isset($_POST['last_name'])) {
-                $user_data['last_name'] = sanitize_text_field($_POST['last_name']);
+            if (isset($_POST['last_name_account'])) {
+                $user_data['last_name'] = sanitize_text_field($_POST['last_name_account']);
             }
 
             if (isset($_POST['country_name'])) {

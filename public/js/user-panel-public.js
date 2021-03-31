@@ -12,7 +12,7 @@
 	});
 	$(document).ready(function(){
 		var url = window.location;
-		if(url.hash){
+		if(url.hash.length > 0){
 			$('.content-panel').not($(url.hash)).removeClass('content-active');
 			$(url.hash).addClass('content-active');
 		}
