@@ -110,3 +110,4 @@ class User_Panel_Public {
 	}
 
 }
+

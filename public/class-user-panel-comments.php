@@ -9,13 +9,14 @@ class User_Panel_Comments{
      /**
      * comments
      */
-    public function get_comments_count()
+    public function get_comments_count($comments = '')
     {
         $args = [
             'user_id' => wp_get_current_user()->ID,
             'count' => true,
         ]; 
         echo __('Your comments: ','user-panel').' '.get_comments($args);
+       
     }
 }
 
