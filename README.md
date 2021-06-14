@@ -55,6 +55,120 @@ Se puede modificar el título y slug desde el menú **Páginas**. Esto no afecta
 
 Esta es toda la configuración necesaria para este complemento.
 
+### Diseño y templates
+
+El plugin cuenta con un front propio que se puede sobre escribir en el theme principal de la página.  
+Este front lo podemos encontrar en:  
+
+**`public/partials/pages`**
+
+En esta carpeta encontramos 3 (tres) templates por defecto.  
+- **user-panel-page.php** el cual engloba todos los templates (pestañas) extras.  
+- **profile.php** es el perfil del usuario propiamente dicho.  
+- **account.php** se utiliza para modificar los datos del usuario.
+
+Se puede sobre escribir, para hacer modificaciones propias, de la siguiente manera:  
+
+1.  Crear una carpeta llamada **user-panel** en su theme principal o child theme.
+2.  Mover la cerpeta **pages** que se encuentra en la ruta antes mencionada, con todos los archivos.
+
+De esta forma ya quedan los templates para poder modificarse y sobre escribir los principales.
+
+Adicional, se puede agregar funciones personalizadas a estos templates en caso de ser necesario.
+
+### Plugin options
+
+Aclaración
+El uso de esta opciones se pude hacer en otro plugin o en su theme directamente. Todas las opciones se llaman con:  
+
+```PHP
+get_option('nombre_opcion')
+```
+
+Más información en el [Codex Wordpress](https://developer.wordpress.org/reference/functions/get_option/).
+
+**Opciones re-utilizables**
+<table>
+
+<tbody>
+
+<tr>
+
+<th>before_panel_user</th>
+
+<td>Header en la página del template principal "user-panel-page.php"</td>
+
+</tr>
+
+<tr>
+
+<th>panel_user_tabs</th>
+
+<td>Agregar tabs para moverse entre páginas en caso de ser necesario</td>
+
+</tr>
+
+<tr>
+
+<th>panel_user_content</th>
+
+<td>Contenido de la página, el ID del contenido debe ser relativo a la tab que lo llama</td>
+
+</tr>
+
+<tr>
+
+<th>after_panel_user</th>
+
+<td>Footer en la página principal</td>
+
+</tr>
+
+<tr>
+
+<th>before_profile_page</th>
+
+<td>Header página de perfil "profile.php"</td>
+
+</tr>
+
+<tr>
+
+<th>profile_details</th>
+
+<td>Permite agregar funciones personalizada al perfil (cuerpo)</td>
+
+</tr>
+
+<tr>
+
+<th>profile_extra_content</th>
+
+<td>No utilizado, permite agregar funciones extras al perfil (abajo del cuerpo)</td>
+
+</tr>
+
+<tr>
+
+<th>before_account_page</th>
+
+<td>Header en página de modificación de cuenta "account.ph"</td>
+
+</tr>
+
+<tr>
+
+<th>account_extra_content</th>
+
+<td>Contenido extra o personalizado por fuera del formulario en "account.php"</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
 
 ### <a id="eng"></a>Docs English
 
