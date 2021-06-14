@@ -42,7 +42,7 @@
             <input type="hidden" name="user_id" value="<?php echo wp_get_current_user()->ID ?>">
         </div>
         <div class="col-12 text-center">
-            <input type="submit" name="update_profile" name="update_profile" class="btn btn-primary" value="<?php echo __('Update data', 'user-update') ?>">
+            <input type="submit" name="update_profile" class="btn btn-primary" value="<?php echo __('Update data', 'user-update') ?>">
         </div>
     </form>
     <?php do_action('account_extra_content')?>

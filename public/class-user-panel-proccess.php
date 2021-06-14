@@ -21,7 +21,7 @@ class User_Panel_Proccess
      */
     public function verify_user_login()
     {
-        if (is_user_logged_in() === false) {
+        if (!is_user_logged_in()) {
             wp_redirect(get_permalink(get_option('user_login_page')) . '?login=unauthorized');
             exit();
         } 
@@ -211,10 +211,10 @@ class User_Panel_Proccess
             $update = wp_update_user($user_data);
 
             if (is_wp_error($update)) {
-                echo 'ERROR';
+                echo 'Ocurrio un Error ';
             } else {
                 wp_redirect(get_permalink(get_option('user_panel_page')) . '#account');
-                exit();
+                //exit();
             }
         }
     }
