@@ -40,5 +40,21 @@ Una vez que se descomprime y renombra la carpeta, nos dirigimos a la lista de pl
 Más información sobre manejo de plugins (en Inglés):**[Wordpress Codex Plugins](https://wordpress.org/support/article/managing-plugins/)**
 
 
+### Configuración
+
+Una vez activo el plugin, no dirigimos al menú **Usuarios** y al submenú **Opciones (Options)**  
+![](docs/img/img3.png)  
+Donde encontramos la siguiente pantalla de configuración:  
+![](docs/img/img4.png)  
+
+La pantalla que vemos nos permite configurar las opciones de páginas por defecto para el plugin.  
+De esta páginas, la opción de **Profile Page o Página de perfil** es creada automáticamente cuando se activa el plugin por primera vez, la segunda opción **Login Page o Ingresar** es creada por el plugin de Suscripciones.  
+En el caso de la página de **Ingresar** se usa como referencia para que usuarios logueados y no logueados puedan iniciar sesión. Esto también esta hecho de esta forma porque este plugin en particular es una extensión del plugin de Suscripciones, o sea, no es utilizable de forma individual.  
+En el caso de la página de Perfil, muestra, por defecto, la edición de datos básicos del usuario.  
+Se puede modificar el título y slug desde el menú **Páginas**. Esto no afecta el funcionamiento de la misma.
+
+Esta es toda la configuración necesaria para este complemento.
+
+
 ### <a id="eng"></a>Docs English
 
