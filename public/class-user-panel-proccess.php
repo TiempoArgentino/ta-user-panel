@@ -21,7 +21,7 @@ class User_Panel_Proccess
      */
     public function verify_user_login()
     {
-        if (!is_user_logged_in()) {
+        if (is_user_logged_in() === false) {
             wp_redirect(get_permalink(get_option('user_login_page')) . '?login=unauthorized');
             exit();
         } 

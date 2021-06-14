@@ -1,5 +1,6 @@
+<?php do_action('before_panel_user') ?>
 <?php get_header() ?>
-<?php do_action('before_panel_user')?>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -14,5 +15,5 @@
     </div>
 </div>
 
-<?php do_action('after_panel_user')?>
+<?php do_action('after_panel_user') ?>
 <?php get_footer() ?>

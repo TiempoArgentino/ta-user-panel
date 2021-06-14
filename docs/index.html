@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación / Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>TA User Panel</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row menu">
+                <div class="col-12" class="d-inline-block"><a href="#spanish">Documentación Español</a> - <a
+                        href="#english" class="d-inline-block">English Docs</a></div>
+            </div>
+        </div>
+    </header>
+    <section id="spanish" class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3>Documentación Español</h3>
+                <p>
+                    El plugin User Panel se creo como una extensión del plugin 
+                    <strong><a href="https://genosha-tech.github.io/ta-suscripciones/" target="_blank">Subscriptions</a>.</strong>
+                </p>
+                <p>
+                    EL proposito del plugin es ser un extensión para funciones de usuario que no se puedan o no sea posible extender en el plugin de suscripciones.
+                </p>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id="content-spanish" class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-3 col-12 menu-side">
+                        <h3>Tabla de contenidos</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#instalacion">Instalación</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#design">Diseño y templates</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#options">Plugin Options</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9 col-12 content-main">
+                        <div id="instalacion" class="doc-item mb-5">
+                            <h4>Instalación</h4>
+                            <p>
+                                Para instalar el plugin, primero debe clonarlo o descargarlo de este repositorio:
+                            </p>
+                            <p>
+                                <a href="https://github.com/matezito/ta-user-panel" target="_blank"
+                                    class="btn btn-dark btn-lg mt-3 mb-3"><i class="bi bi-github"></i> GitHub</a>
+                            </p>
+                            <p>Clonar:
+                                <br />
+                            <pre>$ git clone https://github.com/matezito/ta-user-panel.git</pre>
+                            </p>
+                            <p>Descargar: en la pestaña code boton code (verde) del repositorio, descargar desde
+                                <strong>Download ZIP</strong> como se muestra en la imagen:<br>
+                                <img src="img/img1.png" class="img-fluid">
+                            </p>
+                            <p>
+                                Una vez clonado o descargado, se debe mover la carpeta <strong>user-panel</strong> al
+                                directorio<br />
+                            <pre>wp-content/plugins</pre>
+                            <br> de su instalación de Wordpress.
+                            </p>
+                            <p class="fst-italic small bg-light p-3 rounded">
+                                <strong>IMPORTANTE</strong><br />
+                                Tenga en cuenta que la carpeta <strong>user-panel-main</strong> debe ser renombrada a
+                                <strong>user-panel</strong> (en caso de que al clonar o descomprimir la carpeta este nombrada de esta forma).
+                            </p>
+                            <p>
+                                Una vez que se descomprime y renombra la carpeta, nos dirigimos a la lista de plugins,
+                                buscamos <strong>User Panel</strong> o <strong>Panel de Usuario</strong>(según su
+                                idioma) y lo activamos.<br />
+                                <img src="img/img2.png" class="img-fluid mt-3">
+                                <span class="fst-italic small d-block p-3 rounded bg-light mt-2 ">
+                                    Más información sobre manejo de plugins (en Inglés):<br />
+                                    <a href="https://wordpress.org/support/article/managing-plugins/"
+                                        target="_blank">Wordpress Codex Plugins</a>
+                                </span>
+                            </p>
+                        </div>
+                        <div id="config-1" class="doc-item mb-5">
+                            <h4>Configuración</h4>
+                            <p>
+                             Una vez activo el plugin, no dirigimos al menú <strong>Usuarios</strong> y al submenú <strong>Opciones (Options)</strong><br />
+                             <img src="img/img3.png" class="img-fluid"><br />
+                             Donde encontramos la siguiente pantalla de configuración:<br />
+                             <img src="img/img4.png" class="img-fluid"><br />
+                            </p>
+                            <p>
+                                La pantalla que vemos nos permite configurar las opciones de páginas por defecto para el plugin.<br />
+                                De esta páginas, la opción de <strong>Profile Page o Página de perfil</strong> es creada automáticamente cuando se activa el plugin por primera vez, la segunda opción <strong>Login Page o Ingresar</strong> es creada por el plugin de Suscripciones.<br />
+                                En el caso de la página de <strong>Ingresar</strong> se usa como referencia para que usuarios logueados y no logueados puedan iniciar sesión. Esto también esta hecho de esta forma porque este plugin en particular es una extensión del plugin de Suscripciones, o sea, no es utilizable de forma individual.<br />
+                                En el caso de la página de Perfil, muestra, por defecto, la edición de datos básicos del usuario.<br />
+                                Se puede modificar el título y slug desde el menú <strong>Páginas</strong>. Esto no afecta el funcionamiento de la misma.
+                            </p>
+                            <p>
+                                Esta es toda la configuración necesaria para este complemento.
+                            </p>
+                        </div>
+                        <hr class="mt-5 mb-5">
+                        <!-- diseño y templates -->
+                        <div id="design">
+                            <h4>Diseño y templates</h4>
+                            <p>
+                                El plugin cuenta con un front propio que se puede sobre escribir en el theme principal de la página.<br />
+                                Este front lo podemos encontrar en: <br />
+                                <pre>public/partials/pages</pre>
+                            </p>
+                            <p>
+                                En esta carpeta encontramos 3 (tres) templates por defecto.<br />
+                                <strong>user-panel-page.php</strong> el cual engloba todos los templates (pestañas) extras.<br />
+                                <strong>profile.php</strong> es el perfil del usuario propiamente dicho.<br />
+                                <strong>account.php</strong> se utiliza para modificar los datos del usuario.
+                            </p>
+                            <p>
+                                Se puede sobre escribir, para hacer modificaciones propias, de la siguiente manera: <br />
+                                <ol>
+                                    <li>Crear una carpeta llamada <strong>user-panel</strong> en su theme principal o child theme.</li>
+                                    <li>Mover la cerpeta <strong>pages</strong> que se encuentra en la ruta antes mencionada, con todos los archivos.</li>
+                                </ol>
+                                De esta forma ya quedan los templates para poder modificarse y sobre escribir los principales.
+                            </p>
+                            <p>
+                                Adicional, se puede agregar funciones personalizadas a estos templates en caso de ser necesario.
+                            </p>
+                        </div>
+                        <hr class="mt-5 mb-5">
+                        <!-- options -->
+                        <div id="options">
+                            <h4>Plugin options</h4>
+                            <p>
+                                <small>Aclaración</small><br />
+                                El uso de esta opciones se pude hacer en otro plugin o en su theme directamente. Todas
+                                las opciones se llaman con:<br />
+                            <pre>get_option('nombre_opcion')</pre><br />
+                            Más información en el <a
+                                href="https://developer.wordpress.org/reference/functions/get_option/"
+                                target="_blank">Codex Wordpress</a>.
+                            </p>
+                            <p>
+                                <strong>Opciones re-utilizables</strong>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>before_panel_user</th>
+                                    <td>Header en la página del template principal "user-panel-page.php"</td>
+                                </tr>
+                                <tr>
+                                    <th>panel_user_tabs</th>
+                                    <td>Agregar tabs para moverse entre páginas en caso de ser necesario</td>
+                                </tr>
+                                <tr>
+                                    <th>panel_user_content</th>
+                                    <td>Contenido de la página, el ID del contenido debe ser relativo a la tab que lo llama</td>
+                                <tr>
+                                    <th>after_panel_user</th>
+                                    <td>Footer en la página principal</td>
+                                </tr>
+                                <tr>
+                                    <th>before_profile_page</th>
+                                    <td>Header página de perfil "profile.php"</td>
+                                </tr>
+                                <tr>
+                                    <th>profile_details</th>
+                                    <td>Permite agregar funciones personalizada al perfil (cuerpo)</td>
+                                </tr>
+                                <tr>
+                                    <th>profile_extra_content</th>
+                                    <td>No utilizado, permite agregar funciones extras al perfil (abajo del cuerpo)</td>
+                                </tr>
+                                <tr>
+                                    <th>before_account_page</th>
+                                    <td>Header en página de modificación de cuenta "account.ph"</td>
+                                </tr>
+                                <tr>
+                                    <th>account_extra_content</th>
+                                    <td>Contenido extra o personalizado por fuera del formulario en "account.php"</td>
+                                </tr>
+                            </table>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center mt-5 pb-3">
+            <div class="row">
+                <div class="col-12">
+                    <strong>Tiempo Argentino 2021</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
