@@ -6,8 +6,6 @@ Haciendo click en este [enlace](https://tiempoar.com.ar/proyecto-colaborativo/) 
 [Video Presentación](https://drive.google.com/file/d/1pKsH-sLCkJZPYM-OZdDlDa3rHr7qtHRi/view?usp=sharing)
 
 
-### <a id="spa"></a>Docs Español
-
 El plugin User Panel se creo como una extensión del plugin **[Subscriptions](https://genosha-tech.github.io/ta-suscripciones/).**
 
 EL proposito del plugin es ser un extensión para funciones de usuario que no se puedan o no sea posible extender en el plugin de suscripciones.
@@ -171,8 +169,3 @@ Más información en el [Codex Wordpress](https://developer.wordpress.org/refere
 </tbody>
 
 </table>
-
-
-
-### <a id="eng"></a>Docs English
-
